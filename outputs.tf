@@ -1,7 +1,4 @@
-# Copyright (c) HashiCorp, Inc.
-# SPDX-License-Identifier: MPL-2.0
-
-output "host" {
-  description = "The IP address of the instance."
-  value       = google_redis_instance.my_memorystore_redis_instance.host
+output "url" {
+  description = "The URL where the Cloud Run Service can be accessed."
+  value       = google_cloud_run_service.service-backend.status[0].url
 }
